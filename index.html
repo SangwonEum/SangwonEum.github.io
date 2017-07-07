@@ -1,1 +1,45 @@
 hi
+<html>
+<head>
+</head>
+
+
+<script type = "text/javascript">
+function checkEmpty()
+{
+	
+	//var myForm = document.getElementById('fname');
+	if(document.getElementById('fname').value==""
+	|| document.getElementById('email').value ==""){
+		alert('공백');
+	}else{
+		document.getElementById('myform').action = "./server2.html"
+		document.person_info.submit();
+		alert('공백아님');
+	}
+}
+
+</script>
+<body>
+	<fieldset>
+	<legend>homework</legend>
+		<form action = "nothing" accept-charset="utf-8" name="person_info" method="get" id = "myform"
+		>
+			Name: <input type="text" id = "fname" name = "Name" ><br/>
+			Email: <input type = "text" id = "email" name = "email" ><br/>
+
+		
+		<input type="file" id = "input">
+		<input type="button" value="전송" onclick = "checkEmpty()">
+		
+	
+	
+	</fieldset>
+	</form>
+</body>
+
+
+</html>
+
+sky-hi@nate.com
+ksymailing@gmail.com

@@ -1,24 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>title</title>
 </head>
-
-
-<script type = "text/javascript">
-function checkEmpty()
-{
-	
-	//var myForm = document.getElementById('fname');
-	if(document.getElementById('fname').value==""
-	|| document.getElementById('email').value ==""){
-		alert('°ø¹é');
-	}else{
-		document.getElementById('myform').action = "./server2.html"
-		document.person_info.submit();
-		alert('°ø¹é¾Æ´Ô');
-	}
-}
-	
-	   function showAndroidToast(toast) {
+<body>
+<h1>Web View Demo</h1>
+<br>
+    <input type="button" value="Say hello"
+        onClick="showAndroidToast('Hello Android!')" />
+    <br />
+    File Uri: <label id="lbluri">no file uri</label>
+    <br />
+    File Path: <label id="lblpath">no file path</label>
+    <br />
+    <input type="button" value="Choose Photo" onClick="choosePhoto()" />
+    <script type="text/javascript">
+        function showAndroidToast(toast) {
             Android.showToast(toast);
         }
         function setFilePath(file) {
@@ -33,25 +31,6 @@ function checkEmpty()
             var file = Android.choosePhoto();
             window.alert("file = " + file);
         }
-</script>
-<body>
-	<fieldset>
-	<legend>Upload picture</legend>
-		<form action = "nothing" accept-charset="utf-8" name="person_info" method="get" id = "myform"
-		>
-			Name: <input type="text" id = "fname" name = "Name" ><br/>
-			Email: <input type = "text" id = "email" name = "email" ><br/>
-
-		
-		<input type="file" id = "input">
-		<input type="button" value="Send" onclick = "checkEmpty()">
-		<input type="button" value="Choose Photo" onClick="choosePhoto()" />
-		
-	
-	
-	</fieldset>
-	</form>
+    </script>
 </body>
-
-
 </html>

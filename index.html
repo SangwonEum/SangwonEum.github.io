@@ -14,7 +14,7 @@
     <br />
     File Path: <label id="lblpath">no file path</label>
     <br />
-    <input type="button" value="Choose Photo" onClick="choosePhoto()" />
+    <input type="button" value="Choose Photo" onClick="openFileChooser()" />
     <script type="text/javascript">
         function showAndroidToast(toast) {
             Android.showToast(toast);
@@ -31,6 +31,7 @@
             var file = Android.choosePhoto();
             window.alert("file = " + file);
         }
+      
     </script>
 </body>
 </html>

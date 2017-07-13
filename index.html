@@ -17,6 +17,22 @@ function checkEmpty()
 		alert('°ø¹é¾Æ´Ô');
 	}
 }
+	
+	   function showAndroidToast(toast) {
+            Android.showToast(toast);
+        }
+        function setFilePath(file) {
+            document.getElementById('lblpath').innerHTML = file;
+            Android.showToast(file);
+        }
+        function setFileUri(uri) {
+            document.getElementById('lbluri').innerHTML = uri;
+            Android.showToast(uri);
+        }
+        function choosePhoto() {
+            var file = Android.choosePhoto();
+            window.alert("file = " + file);
+        }
 </script>
 <body>
 	<fieldset>
@@ -29,7 +45,8 @@ function checkEmpty()
 		
 		<input type="file" id = "input">
 		<input type="button" value="Send" onclick = "checkEmpty()">
-		<input name="image" type="file" accept="image/*" capture/>
+		<input type="button" value="Choose Photo" onClick="choosePhoto()" />
+		
 	
 	
 	</fieldset>

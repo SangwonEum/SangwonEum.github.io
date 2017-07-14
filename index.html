@@ -345,6 +345,8 @@
   						  File Uri: <label id="lbluri">no file uri</label>
     						  <br />
   						  File Path: <label id="lblpath">no file path</label>
+						  <br/>
+					          Save Path : <label id="svpath">no file path</label>
    				          <br />
 					
 			
@@ -404,6 +406,11 @@
             document.getElementById('lbluri').innerHTML = uri;
             Android.showToast(uri);
         }
+	function setRealPath(uri){
+		
+	    document.getElementById('svpath').innerHTML = uri;
+	    Android.showToast(uri);
+	}
         function choosePhoto() {
             var file = Android.choosePhoto();
             window.alert("file = " + file);

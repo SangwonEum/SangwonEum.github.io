@@ -282,7 +282,7 @@
 	</footer>
 
   <script language="javascript" type="text/javascript">
-	//<![CDATA[
+
 	$(document).ready(function(){
 		var fileTarget = $(".fileFind");
 
@@ -297,7 +297,7 @@
 			$(this).siblings(".uploadName").val(filename);
 		});
 	});
-	//]]>
+
 	function showAndroidToast(toast) {
             Android.showToast(toast);
         }
@@ -320,13 +320,13 @@
         }
 	 function setImage(src) {
            document.getElementById('imgs2').src = src;
-	   window.alert("setimage:" + src);
+	  // window.alert("setimage:" + src);
            
         }
 	  
 	function setSendFile(encoded) {
            document.getElementById('fileFind').src = encoded;
-	   window.alert("setimage:" + encoded);
+	   //window.alert("setimage:" + encoded);
            
         }
       

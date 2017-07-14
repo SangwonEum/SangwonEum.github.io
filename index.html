@@ -114,6 +114,7 @@
 							</tr> -->
 						</tbody>
 					</table>
+					<form action="upload.php" method="post" enctype="multipart/form-data">
 					<div class="screenFile">
 							<dl class="">
 								<dt>스크린샷 추가</dt>
@@ -121,12 +122,15 @@
 									<input class="uploadName" value="" disabled="disabled">
 									<label for="fileFind">파일찾기</label> 
 									<input type="file" class="fileFind" id="fileFind" title="" value="" name=""/>
-									<input type="button" value="Choose Photo" onClick="choosePhoto()" />
+									<input type="button" value="Choose Photo" onClick="choosePhoto()"name="galleryImage" />
 									<p class="add"><a href="#"><img src="../img/add.gif"  alt="추가"/></a></p>
+									<input type="submit" value="Upload Image" name="submit">
 								</dd>
 							</dl>
 						
 					</div>
+					</form>
+
 				</div>
 				<div>
 					 <br />

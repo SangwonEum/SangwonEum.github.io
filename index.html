@@ -334,7 +334,8 @@
 									<input class="uploadName" value="" disabled="disabled">
 									<label for="fileFind">파일찾기</label> 
 									<input type="file" class="fileFind" id="fileFind" title="" value="" name=""/>
-									<input type="button" value="Choose Photo" onClick="choosePhoto()" />
+									<input type="button" value="Choose Photo From Android Gallery" onClick="choosePhoto()" />
+									<input type="button" value="Upload File" onClick="upload()" />
 									<p class="add"><a href="#"><img src="../img/add.gif"  alt="추가"/></a></p>
 								</dd>
 							</dl>
@@ -416,6 +417,11 @@
         }
 	 function setImage(src) {
            document.getElementById('imgs2').src = src;
+	   
+           
+        }
+	  function upload() {
+           Android.uploadtoServer();
 	   
            
         }
